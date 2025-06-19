@@ -27,7 +27,7 @@
     </header>
     <div class="flex flex-1">
         <!-- Sidebar -->
-        <x-sidebar :project="$project" :boards="$boards" />
+        <x-sidebar :workspace="$myWorkspace" :user_email="$email" :boards="$boards"/>
         <!-- Main Content -->
         <main class="flex-1 p-10 bg-[#f7f7f7] overflow-y-auto">
             <div class="max-w-6xl mx-auto">

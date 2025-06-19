@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'roleId'
     ];
 
     /**
@@ -44,5 +45,35 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'roleId');
+    }
+
+    public function workspaces()
+    {
+        return $this->hasMany(Workspace::class, 'ownerId');
+    }
+
+    public function workspaceMemberships()
+    {
+        return $this->belongsToMany(Workspace::class, 'workspace_member', 'userId', 'workspaceId');
+    }
+
+    public function responsibilities()
+    {
+        return $this->belongsToMany(Task::class, 'responsibility', 'userId', 'taskId');
+    }
+
+    public function attachments()
+    {
+        return $this->hasMany(Attachment::class, 'userId');
+    }
+
+    public function histories()
+    {
+        return $this->hasMany(History::class, 'userId');
     }
 }
