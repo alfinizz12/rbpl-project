@@ -42,39 +42,51 @@
                         </form>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow border border-blue-200 p-4 max-h-[300px] overflow-y-auto">
-                        <ul class="space-y-2">
-                            @forelse($myLogs as $log)
-                                <li
-                                    class="flex justify-between items-center bg-[#f7f7f7] border border-blue-200 rounded px-4 py-3">
-                                    <span>{{ $log->activity }}</span>
-                                    <span class="text-xs text-gray-500">{{ $log->created_at->diffForHumans() }}</span>
-                                </li>
-                            @empty
-                                <li class="text-gray-400">Belum ada aktivitas Anda di workspace ini.</li>
-                            @endforelse
-                        </ul>
+                    <div class="bg-white rounded-lg shadow border border-blue-200 p-4">
+                        <div class="max-h-[250px] overflow-y-auto pr-2">
+                            <ul class="space-y-2">
+                                @forelse($myLogs as $log)
+                                    <li
+                                        class="flex justify-between items-center bg-[#f7f7f7] border border-blue-200 rounded px-4 py-3">
+                                        <span>{{ $log->activity }}</span>
+                                        <span class="text-xs text-gray-500">{{ $log->created_at->diffForHumans() }}</span>
+                                    </li>
+                                @empty
+                                    <li class="text-gray-400">Belum ada aktivitas Anda di workspace ini.</li>
+                                @endforelse
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
 
                 <!-- Team Logs -->
 
-                    <div class="bg-white rounded-lg shadow border border-blue-200 p-4 max-h-[300px] overflow-y-auto">
-                        <ul class="space-y-2">
-                            @forelse($teamLogs as $log)
-                                <li
-                                    class="flex justify-between items-center bg-[#f7f7f7] border border-blue-200 rounded px-4 py-3">
-                                    <span>{{ $log->activity }}</span>
-                                    <span class="text-xs text-gray-500">{{ $log->created_at->diffForHumans() }}</span>
-                                </li>
-                            @empty
-                                <li class="text-gray-400">Belum ada aktivitas tim di workspace ini.</li>
-                            @endforelse
-                        </ul>
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">Team Logs</h2>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow border border-blue-200 p-4">
+                        <div class="max-h-[250px] overflow-y-auto pr-2">
+                            <ul class="space-y-2">
+                                @forelse($teamLogs as $log)
+                                    <li
+                                        class="flex justify-between items-center bg-[#f7f7f7] border border-blue-200 rounded px-4 py-3">
+                                        <span>{{ $log->activity }}</span>
+                                        <span class="text-xs text-gray-500">{{ $log->created_at->diffForHumans() }}</span>
+                                    </li>
+                                @empty
+                                    <li class="text-gray-400">Belum ada aktivitas tim di workspace ini.</li>
+                                @endforelse
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </main>
+
         </div>
+        </main>
+    </div>
     </div>
 </body>
 
