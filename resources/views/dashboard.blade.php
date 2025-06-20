@@ -15,7 +15,7 @@
         <header class="bg-white shadow-sm">
             <div class="px-8 py-4 flex items-center justify-between">
                 <div class="flex items-center">
-                    <img src="images/logo.svg" alt="Logo" class="w-10 h-10 mr-3" />
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-10 h-10 mr-3" />
                     <span class="text-[#7bbde8] text-2xl font-light">Berbinar Insightful</span>
                 </div>
                 <div class="flex items-center space-x-4">

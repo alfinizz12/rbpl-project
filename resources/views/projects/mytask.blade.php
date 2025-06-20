@@ -13,7 +13,7 @@
         <!-- Header -->
         <header class="bg-white shadow-sm flex items-center justify-between px-8 py-3 border-b">
             <a href="/dashboard" class="flex items-center">
-                <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-8 h-8 mr-3" />
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-8 h-8 mr-3" />
                 <span class="text-[#7bbde8] text-xl font-light">Berbinar Insightful</span>
             </a>
             <form class="flex items-center w-64 max-w-full mr-4">

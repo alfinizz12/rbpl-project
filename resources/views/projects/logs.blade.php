@@ -12,7 +12,7 @@
     <div class="min-h-screen flex flex-col">
         <!-- Header -->
         <header class="bg-white shadow-sm flex items-center justify-between px-8 py-3 border-b">
-            <a href="{{ route('dashboard') }}" class="flex items-center">
+            <a href="{{ asset('images/logo.png') }}" class="flex items-center">
                 <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-8 h-8 mr-3" />
                 <span class="text-[#7bbde8] text-xl font-light">Berbinar Insightful</span>
             </a>

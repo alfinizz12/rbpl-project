@@ -9,7 +9,7 @@
 <body>
     <div class="flex flex-col items-center justify-center min-h-screen bg-white px-4">
         <div class="flex items-center mb-6">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[60px] h-[60px]" />
+            <img src="../images/logo.png" alt="Logo" class="w-[60px] h-[60px]" />
             <h1 class="text-[#7bbde8] text-2xl font-light ml-3">Berbinar Insightful</h1>
         </div>
         <div class="bg-white p-6 rounded-xl shadow-2xl w-full max-w-sm">
