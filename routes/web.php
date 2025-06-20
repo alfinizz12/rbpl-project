@@ -46,7 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/tasks/find-attachment/{attachment}', function (App\Models\Attachment $attachment) {
         return response()->json($attachment);
     });
-    // Route::post('/submissions/update/{attachment}', [AttachmentController::class, 'update'])->name('submissions.update');
 
     // logs
     Route::get('/workspace/{workspace}/logs', [LogController::class, 'index'])->name('logs.index');
